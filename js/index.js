@@ -90,3 +90,31 @@ ctaImg.src = siteContent.cta['img-src'];
 const middleImg = document.querySelector('.middle-img');
 middleImg.src = siteContent['main-content']['middle-img-src'];
 
+// main-content text-content
+const textH4 = Array.from(document.querySelectorAll('.text-content h4'));
+const textP = Array.from(document.querySelectorAll('.text-content p'));
+
+const features = textH4[0];
+const featureP = textP[0];
+features.textContent = siteContent['main-content']['features-h4'];
+featureP.textContent = siteContent['main-content']['features-content'];
+
+const about = textH4[1];
+const aboutContent = textP[1];
+about.textContent = siteContent['main-content']['about-h4'];
+aboutContent.textContent = siteContent['main-content']['about-content'];
+
+const services = textH4[2];
+const servicesContent = textP[2];
+services.textContent = siteContent['main-content']['services-h4'];
+servicesContent.textContent = siteContent['main-content']['services-content'];
+
+const product = textH4[3];
+const productContent = textP[3];
+product.textContent = siteContent['main-content']['product-h4'];
+productContent.textContent = siteContent['main-content']['product-content'];
+
+const vision = textH4[4];
+const visionContent = textP[4];
+vision.textContent = siteContent['main-content']['vision-h4'];
+visionContent.textContent = siteContent['main-content']['vision-content'];
