@@ -40,3 +40,81 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+let navItems = document.querySelectorAll("nav a")
+navItems.forEach((link,i) => {
+  link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
+});
+
+const newNavList = document.querySelector('nav');
+const navHome = document.createElement('a');
+const navBlog = document.createElement('a');
+navHome.href = '#';
+navHome.textContent = 'Home';
+navHome.style.color = 'light gray';
+navBlog.href = '#';
+navBlog.textContent = 'Blog';
+navBlog.style.color = 'light gray';
+
+newNavList.appendChild(navBlog);
+newNavList.prepend(navHome);
+
+const cta = document.querySelector('.cta')
+const ctaText = document.querySelector('.cta .cta-text')
+const h1Arr = siteContent['cta']['h1'].split(' ');
+const domH1 = document.createElement('h1');
+const isH1 = document.createElement('h1');
+const awesomeH1 = document.createElement('h1');
+
+// cta h1
+cta.prepend(awesomeH1);
+cta.prepend(isH1);
+cta.prepend(domH1);
+ctaText.prepend(awesomeH1);
+ctaText.prepend(isH1);
+ctaText.prepend(domH1);
+
+domH1.textContent = h1Arr[0];
+isH1.textContent = h1Arr[1];
+awesomeH1.textContent = h1Arr[2];
+
+// cta button 
+const ctaButton = document.querySelector('.cta-text button');
+ctaButton.textContent = siteContent.cta['button'];
+
+//cta get-started image
+let ctaImg = document.getElementById('cta-img');
+ctaImg.src = siteContent.cta['img-src'];
+
+// main-content middle-img
+const middleImg = document.querySelector('.middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
+// main-content text-content
+const textH4 = Array.from(document.querySelectorAll('.text-content h4'));
+const textP = Array.from(document.querySelectorAll('.text-content p'));
+
+const features = textH4[0];
+const featureP = textP[0];
+features.textContent = siteContent['main-content']['features-h4'];
+featureP.textContent = siteContent['main-content']['features-content'];
+
+const about = textH4[1];
+const aboutContent = textP[1];
+about.textContent = siteContent['main-content']['about-h4'];
+aboutContent.textContent = siteContent['main-content']['about-content'];
+
+const services = textH4[2];
+const servicesContent = textP[2];
+services.textContent = siteContent['main-content']['services-h4'];
+servicesContent.textContent = siteContent['main-content']['services-content'];
+
+const product = textH4[3];
+const productContent = textP[3];
+product.textContent = siteContent['main-content']['product-h4'];
+productContent.textContent = siteContent['main-content']['product-content'];
+
+const vision = textH4[4];
+const visionContent = textP[4];
+vision.textContent = siteContent['main-content']['vision-h4'];
+visionContent.textContent = siteContent['main-content']['vision-content'];
