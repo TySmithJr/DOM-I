@@ -85,3 +85,8 @@ ctaButton.textContent = siteContent.cta['button'];
 //cta get-started image
 let ctaImg = document.getElementById('cta-img');
 ctaImg.src = siteContent.cta['img-src'];
+
+// main-content middle-img
+const middleImg = document.querySelector('.middle-img');
+middleImg.src = siteContent['main-content']['middle-img-src'];
+
