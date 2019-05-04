@@ -46,3 +46,33 @@ navItems.forEach((link,i) => {
   link.innerHTML = siteContent.nav[`nav-item-${i+1}`];
 });
 
+const newNavList = document.querySelector('nav');
+const navHome = document.createElement('a');
+const navBlog = document.createElement('a');
+navHome.href = '#';
+navHome.textContent = 'Home';
+navHome.style.color = 'light gray';
+navBlog.href = '#';
+navBlog.textContent = 'Blog';
+navBlog.style.color = 'light gray';
+
+newNavList.appendChild(navBlog);
+newNavList.prepend(navHome);
+
+const cta = document.querySelector('.cta')
+const ctaText = document.querySelector('.cta .cta-text')
+const h1Arr = siteContent['cta']['h1'].split(' ');
+const domH1 = document.createElement('h1');
+const isH1 = document.createElement('h1');
+const awesomeH1 = document.createElement('h1');
+
+cta.prepend(awesomeH1);
+cta.prepend(isH1);
+cta.prepend(domH1);
+ctaText.prepend(awesomeH1);
+ctaText.prepend(isH1);
+ctaText.prepend(domH1);
+
+domH1.textContent = h1Arr[0];
+isH1.textContent = h1Arr[1];
+awesomeH1.textContent = h1Arr[2];
