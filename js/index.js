@@ -8,6 +8,8 @@ const siteContent = {
     "nav-item-6": "Contact",
     "img-src": "img/logo.png"
   },
+  
+
   "cta": {
     "h1": "DOM Is Awesome",
     "button": "Get Started",
@@ -78,6 +80,12 @@ domH1.textContent = h1Arr[0];
 isH1.textContent = h1Arr[1];
 awesomeH1.textContent = h1Arr[2];
 
+domH1.addEventListener("click", function() {
+domH1.style.color = "green"
+isH1.style.color = "green"
+awesomeH1.style.color = "green"
+})
+
 // cta button 
 const ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent.cta['button'];
@@ -118,3 +126,16 @@ const vision = textH4[4];
 const visionContent = textP[4];
 vision.textContent = siteContent['main-content']['vision-h4'];
 visionContent.textContent = siteContent['main-content']['vision-content'];
+
+// contact
+const contact = document.querySelectorAll('.contact h4');
+contact[0].textContent = siteContent['contact']['contact-h4'];
+
+const contactUs = document.querySelectorAll('.contact p');
+contactUs[0].textContent = siteContent['contact']['address'];
+contactUs[1].textContent = siteContent['contact']['phone'];
+contactUs[2].textContent = siteContent['contact']['email'];
+
+// footer
+const footerContent = document.querySelector('footer')
+footerContent.textContent = siteContent['footer']['copyright'];
